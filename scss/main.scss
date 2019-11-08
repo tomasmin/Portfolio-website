@@ -146,16 +146,6 @@ main {
     min-width: 12rem;
     font-size: 1rem;
   }
-
-  .timeline .date::after {
-    content: "";
-    box-shadow: 0 0 0 $secondary-color;
-    border-radius: 100%;
-    left: -8rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: $primary-color;
-  }
 }
 
 .projects {
