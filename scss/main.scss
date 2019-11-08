@@ -23,7 +23,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
   &.sm-heading {
@@ -76,8 +76,10 @@ main {
 
 .about-info {
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio";
+  grid-gap: 20px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "tl tl tl";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -89,8 +91,161 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
+
+  .timeline {
+    grid-area: tl;
+  }
+
+  .timeline h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .timeline ul {
+    border-left: 4px solid $secondary-color;
+    border-radius: 0.8rem;
+    background-color: $primary-color;
+    margin: 0 auto;
+    list-style: none;
+    text-align: left;
+    width: 70%;
+  }
+
+  .timeline h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+
+  .timeline .date {
+    border-bottom: 1px solid $secondary-color;
+    margin-bottom: 1rem;
+  }
+
+  .timeline .date:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .timeline .date::before,
+  .timeline .date::after {
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .timeline .date::before {
+    content: attr(data-date);
+    text-align: right;
+    min-width: 12rem;
+    font-size: 1rem;
+  }
+
+  .timeline .date::after {
+    content: "";
+    box-shadow: 0 0 0 $secondary-color;
+    border-radius: 100%;
+    left: -8rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: $primary-color;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  max-width: 850px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    text-align: center;
+  }
+
+  .tech-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    img {
+      border: none;
+      width: 30%;
+      margin: 0.5rem;
+    }
+  }
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
 }
 
 #main-footer {
