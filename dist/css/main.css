@@ -93,7 +93,6 @@ body {
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
-    background-repeat: no-repeat;
     background-size: cover; }
     body#bg-img:after {
       content: "";
@@ -299,6 +298,7 @@ main {
 
 @media screen and (max-width: 500px) {
   main {
+    min-height: 100vh;
     padding: 2rem; }
     main #home h1 {
       margin-top: 10vh; }

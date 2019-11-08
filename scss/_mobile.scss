@@ -34,6 +34,7 @@
 
 @include mediaSm {
   main {
+    min-height: 100vh;
     padding: 2rem;
     #home h1 {
       margin-top: 10vh;
