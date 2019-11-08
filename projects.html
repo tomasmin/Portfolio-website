@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/8d322a93c2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>My Projects</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="projects.html" class="nav-link">
+              Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="projects">
+      <h1 class="lg-heading">
+        My <span class="text-secondary">Projects</span>
+      </h1>
+      <h2 class="sm-heading">
+        Some of my personal projects
+      </h2>
+      <div class="projects">
+        <div class="item">
+          <div class="image-container">
+            <img src="img/projects/vocab.png" alt="Project" />
+            <div class="tech-icons">
+              <img src="img/projects/kotlin-1.svg" title="Kotlin" />
+              <img src="img/projects/firebase-1.svg" title="Firebase" />
+            </div>
+          </div>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.tomas.vocabquiztest"
+            class="btn-light"
+            target="_blank"
+          >
+            <i class="fab fa-google-play"></i> Google Play
+          </a>
+          <a
+            href="https://github.com/tomasmin/Vocab-Quiz"
+            class="btn-dark"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+        <div class="item">
+          <div class="image-container">
+            <img src="img/projects/converter.jpg" alt="Project" />
+            <div class="tech-icons">
+              <img src="img/projects/laravel-2.svg" title="Laravel" />
+              <img src="img/projects/ffmpeg.svg" title="FFmpeg" />
+            </div>
+          </div>
+          <a
+            href="https://github.com/tomasmin/File-Converter"
+            class="btn-dark"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer id="main-footer">
+      Copyright &copy; 2019
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
